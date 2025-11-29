@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.vscode/
+.DS_Store
+.env
+*.log
+npm-debug.log*
+.cache/
+/.idea/
+coverage/
+/.parcel-cache/
+build/
+*.local
+*.pem
+*.key
+
+# Images and assets that are safe to keep, but if you have large originals consider using Git LFS
+# *.psd
+# *.ai
