@@ -1,0 +1,11 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx serve -s . -l 3000"
+  },
+  "description": "Static frontend for TecNomic homepage (placeholder assets)",
+  "author": "",
+  "license": "MIT"
+}
