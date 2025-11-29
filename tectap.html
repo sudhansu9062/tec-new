@@ -3,15 +3,27 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TecTAP Analytics — TecSyz</title>
+    <title>TecTAP Analytics — Tecsyz</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="page-tectap">
     <header class="site-header">
       <div class="container header-inner">
-        <a class="logo" href="index.html">TecTAP<span class="brand-text"></span></a>
-        <nav class="top-nav"><a href="index.html">Home</a><a href="contact.html">Contact</a></nav>
+        <div class="header-left">
+          <a class="logo" href="index.html">TecTAP<span class="brand-text"></span></a>
+        </div>
+        <div class="header-right">
+          <nav class="top-nav" aria-label="Main navigation">
+            <a href="#">Features</a>
+            <a href="#">Solutions</a>
+            <a href="#">Pricing</a>
+            <a href="#">Resources</a>
+          </nav>
+          <a class="signin" href="#">Sign In</a>
+          <a class="btn-pill-outline" href="contact.html">Get a Demo</a>
+          <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        </div>
       </div>
     </header>
 
@@ -144,7 +156,7 @@
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-bottom-inner">© 2024 TecSyz Systems. <a href="index.html">Home</a></div>
+      <div class="container footer-bottom-inner">© 2024 Tecsyz Systems. <a href="index.html">Home</a></div>
     </footer>
 
     <script src="main.js"></script>

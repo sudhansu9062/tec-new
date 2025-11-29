@@ -3,6 +3,7 @@
 This folder contains the static frontend for the TecNomic site (HTML, CSS, JS, images).
 
 Quick notes
+
 - The project is static HTML/CSS/JS — no build step required unless you add a bundler.
 - If you add large binaries (source PSDs, large PNGs), consider using Git LFS or keeping them out of the repo.
 
@@ -42,12 +43,15 @@ git push origin main
 ```
 
 Vercel deployment
+
 - If the repository is connected to Vercel, pushing to `main` will trigger a deployment automatically.
 - If your static site is inside a subfolder (e.g. `frontend`), set Project Root in Vercel to `frontend`.
 
 Questions?
+
 - If you want, I can also create a feature branch patch and prepare a commit message for you to review.
-```
+
+````
 # TecNomic Frontend (static)
 
 This folder contains a static approximation of the homepage design from the provided screenshot.
@@ -58,7 +62,7 @@ Quick start (requires Node.js):
 cd "c:/Users/sudhansu sekhar/Desktop/New/frontend"
 npx serve -s . -l 3000
 # open http://localhost:3000
-```
+````
 
 Notes:
 

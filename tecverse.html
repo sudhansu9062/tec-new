@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>TecVerse Platform — TecSyz</title>
+    <title>TecVerse Platform — TecVerse</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="page-tecverse">
     <header class="site-header site-header--compact">
       <div class="container header-inner header--centered">
         <div class="header-left">
@@ -87,34 +87,39 @@
         </div>
       </section>
 
-      <!-- Why TecVerse / platform features -->
-      <section id="platform" class="container two-col">
-        <div class="col-left">
-          <p class="eyebrow">WHY TECVERSE</p>
-          <h2 class="section-title">Built for Developers, <span class="accent">Trusted by Enterprises</span></h2>
-          <p class="section-text">TecVerse provides cloud-native orchestration that simplifies complex infrastructure management. Our platform offers comprehensive APIs, multi-region availability, and seamless integration with your existing tech stack.</p>
-          <p>Whether you're building real-time applications, managing distributed systems, or scaling globally, TecVerse delivers the reliability and performance your business demands.</p>
-        </div>
+      <!-- Why TecVerse / platform features (full-bleed pale band) -->
+      <section id="platform" class="pale-band">
+        <div class="container">
+          <div class="two-col">
+            <div class="col-left">
+              <p class="eyebrow">WHY TECVERSE</p>
+              <h2 class="section-title">Built for Developers,<br><span class="accent-teal">Trusted by Enterprises</span></h2>
+              <p class="section-text">TecVerse provides cloud-native orchestration that simplifies complex infrastructure management. Our platform offers comprehensive APIs, multi-region availability, and seamless integration with your existing tech stack.</p>
+              <p class="section-text">Whether you're building real-time applications, managing distributed systems, or scaling globally, TecVerse delivers the reliability and performance your business demands.</p>
+            </div>
 
-        <aside class="col-right panel features-panel">
-          <h3>Platform Features</h3>
-          <ul class="feature-list">
-            <li><span class="feature-pill"></span><span class="text">Cloud-Native Orchestration</span></li>
-            <li><span class="feature-pill"></span><span class="text">RESTful &amp; GraphQL APIs</span></li>
-            <li><span class="feature-pill"></span><span class="text">Multi-Region Availability</span></li>
-            <li><span class="feature-pill"></span><span class="text">Real-Time Data Sync</span></li>
-            <li><span class="feature-pill"></span><span class="text">Automated Backups</span></li>
-            <li><span class="feature-pill"></span><span class="text">Custom Webhooks</span></li>
-          </ul>
-        </aside>
+            <aside class="col-right panel features-panel">
+              <h3>Platform Features</h3>
+              <ul class="feature-list">
+                <li><span class="feature-pill"></span><span class="text">Cloud-Native Orchestration</span></li>
+                <li><span class="feature-pill"></span><span class="text">RESTful &amp; GraphQL APIs</span></li>
+                <li><span class="feature-pill"></span><span class="text">Multi-Region Availability</span></li>
+                <li><span class="feature-pill"></span><span class="text">Real-Time Data Sync</span></li>
+                <li><span class="feature-pill"></span><span class="text">Automated Backups</span></li>
+                <li><span class="feature-pill"></span><span class="text">Custom Webhooks</span></li>
+              </ul>
+            </aside>
+          </div>
+        </div>
       </section>
 
-      <!-- Capabilities grid -->
-      <section class="container capabilities">
-        <h2 class="section-title center">Everything You Need to <span class="accent">Scale with Confidence</span></h2>
-        <p class="section-sub center">A comprehensive suite of tools and services designed to accelerate your development and ensure operational excellence.</p>
+      <!-- Capabilities grid (pale full-bleed background) -->
+      <section class="pale-band">
+        <div class="container capabilities">
+          <h2 class="section-title center">Everything You Need to<br><span class="accent">Scale with Confidence</span></h2>
+          <p class="section-sub center">A comprehensive suite of tools and services designed to accelerate your development and ensure operational excellence.</p>
 
-        <div class="capabilities-grid">
+          <div class="capabilities-grid">
           <div class="cap">
             <div class="cap-icon"><img src="icon-cloud.png" alt="Cloud Orchestration"/></div>
             <h4>Cloud Orchestration</h4>
@@ -149,6 +154,7 @@
             <div class="cap-icon"><img src="icon-analytics.png" alt="Analytics Dashboard"/></div>
             <h4>Analytics Dashboard</h4>
             <p class="muted">Real-time metrics, custom alerts, and comprehensive audit logs.</p>
+          </div>
           </div>
         </div>
       </section>
