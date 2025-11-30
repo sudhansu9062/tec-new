@@ -42,58 +42,58 @@
   }
 
   // Contact form: client-side validation + POST to /api/submit (if present)
-  const contactForm = document.querySelector('.contact-form');
-  if(contactForm){
-    contactForm.addEventListener('submit', async function(e){
-      e.preventDefault();
-      const name = contactForm.querySelector('input[name="name"]');
-      const email = contactForm.querySelector('input[name="email"]');
-      const message = contactForm.querySelector('textarea[name="message"]');
-      const company = contactForm.querySelector('input[name="company"]');
-      const phone = contactForm.querySelector('input[name="phone"]');
-      let ok = true;
-      [name,email,message].forEach(field=>{
-        if(field && field.hasAttribute('required') && !field.value.trim()){
-          field.classList.add('field-error');
-          ok = false;
-        } else if(field) field.classList.remove('field-error');
-      });
-      const statusEl = contactForm.querySelector('.form-status');
-      if(!ok){
-        if(statusEl){ statusEl.textContent = 'Please fill the required fields.'; statusEl.classList.remove('success'); statusEl.classList.add('error'); }
-        const first = contactForm.querySelector('.field-error');
-        if(first) first.focus();
-        return;
-      }
+  // const contactForm = document.querySelector('.contact-form');
+  // if(contactForm){
+  //   contactForm.addEventListener('submit', async function(e){
+  //     e.preventDefault();
+  //     const name = contactForm.querySelector('input[name="name"]');
+  //     const email = contactForm.querySelector('input[name="email"]');
+  //     const message = contactForm.querySelector('textarea[name="message"]');
+  //     const company = contactForm.querySelector('input[name="company"]');
+  //     const phone = contactForm.querySelector('input[name="phone"]');
+  //     let ok = true;
+  //     [name,email,message].forEach(field=>{
+  //       if(field && field.hasAttribute('required') && !field.value.trim()){
+  //         field.classList.add('field-error');
+  //         ok = false;
+  //       } else if(field) field.classList.remove('field-error');
+  //     });
+  //     const statusEl = contactForm.querySelector('.form-status');
+  //     if(!ok){
+  //       if(statusEl){ statusEl.textContent = 'Please fill the required fields.'; statusEl.classList.remove('success'); statusEl.classList.add('error'); }
+  //       const first = contactForm.querySelector('.field-error');
+  //       if(first) first.focus();
+  //       return;
+  //     }
 
-      if(statusEl){ statusEl.textContent = 'Sending...'; statusEl.classList.remove('error','success'); }
+  //     if(statusEl){ statusEl.textContent = 'Sending...'; statusEl.classList.remove('error','success'); }
 
-      const payload = {
-        name: name.value.trim(),
-        company: company ? company.value.trim() : '',
-        email: email.value.trim(),
-        phone: phone ? phone.value.trim() : '',
-        message: message.value.trim()
-      };
+  //     const payload = {
+  //       name: name.value.trim(),
+  //       company: company ? company.value.trim() : '',
+  //       email: email.value.trim(),
+  //       phone: phone ? phone.value.trim() : '',
+  //       message: message.value.trim()
+  //     };
 
-      try{
-        const resp = await fetch('/api/submit', {
-          method: 'POST',
-          headers: {'Content-Type':'application/json'},
-          body: JSON.stringify(payload)
-        });
-        const data = await resp.json();
-        if(resp.ok){
-          if(statusEl){ statusEl.textContent = 'Thanks — your message has been submitted.'; statusEl.classList.add('success'); }
-          contactForm.reset();
-        } else {
-          if(statusEl){ statusEl.textContent = 'Submission failed: ' + (data.error || data.detail || 'Unknown error'); statusEl.classList.add('error'); }
-        }
-      } catch(err){
-        if(statusEl){ statusEl.textContent = 'Network error — please try again.'; statusEl.classList.add('error'); }
-      }
-    });
-  }
+  //     try{
+  //       const resp = await fetch('/api/submit', {
+  //         method: 'POST',
+  //         headers: {'Content-Type':'application/json'},
+  //         body: JSON.stringify(payload)
+  //       });
+  //       const data = await resp.json();
+  //       if(resp.ok){
+  //         if(statusEl){ statusEl.textContent = 'Thanks — your message has been submitted.'; statusEl.classList.add('success'); }
+  //         contactForm.reset();
+  //       } else {
+  //         if(statusEl){ statusEl.textContent = 'Submission failed: ' + (data.error || data.detail || 'Unknown error'); statusEl.classList.add('error'); }
+  //       }
+  //     } catch(err){
+  //       if(statusEl){ statusEl.textContent = 'Network error — please try again.'; statusEl.classList.add('error'); }
+  //     }
+  //   });
+  // }
 
   // Back to top button
   const back = document.createElement('button');
